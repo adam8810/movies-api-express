@@ -1,0 +1,58 @@
+{
+  "name": "movies-api",
+  "version": "1.0.0",
+  "description": "Simple API to return movie information",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adam8810/movies-api-express.git"
+  },
+  "author": "Adam Booth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adam8810/movies-api-express/issues"
+  },
+  "homepage": "https://github.com/adam8810/movies-api-express#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "morgan": "^1.10.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/jest": "^29.5.14",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.13.11",
+    "eslint": "^9.22.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.6",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": ".(spec|test).ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json",
+      "node"
+    ],
+    "coverageDirectory": "./coverage/",
+    "collectCoverageFrom": [
+      "**/*.{js,ts}",
+      "!**/node_modules/**"
+    ]
+  }
+}
